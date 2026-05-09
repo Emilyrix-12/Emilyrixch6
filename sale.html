@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Чоловікам — Majora</title>
+  <title>Знижки — Majora</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="men.css">
+  <link rel="stylesheet" href="sale.css">
 </head>
 <body>
 
   <!-- TOPBAR -->
-  <div class="topbar">Безкоштовна доставка від 1500 ₴</div>
+  <div class="topbar">🔥 Весняний розпродаж — до −40% на обрані позиції</div>
 
   <!-- HEADER -->
   <header>
     <a class="logo" href="index.html">Majora</a>
     <nav>
       <a href="new.html">Новинки</a>
-      <a href="2.html">Жінкам</a>
-      <a href="men.html" class="active">Чоловікам</a>
-      <a href="sale.html">Знижки</a>
+      <a href="women.html">Жінкам</a>
+      <a href="men.html">Чоловікам</a>
+      <a href="sale.html" class="active">Знижки</a>
     </nav>
     <div class="icons">
       <button title="Пошук">
@@ -35,86 +35,80 @@
     </div>
   </header>
 
-  <!-- PAGE HERO -->
+  <!-- HERO -->
   <div class="page-hero">
     <div class="page-hero-img">
-      <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=1200&q=80" alt="Чоловіча колекція">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1400&q=80" alt="Знижки">
       <div class="hero-overlay"></div>
     </div>
     <div class="page-hero-content">
-      <span class="hero-tag">Колекція весна / літо 2026</span>
-      <h1>Чоловіча<br><em>колекція</em></h1>
-      <p>183 товари · оновлено сьогодні</p>
-      <a href="#catalog" class="hero-cta">Переглянути →</a>
+      <span class="hero-tag">Тільки до кінця місяця</span>
+      <h1>Весняний<br><em>розпродаж</em></h1>
+      <p>96 товарів зі знижкою · до −40%</p>
+      <a href="#catalog" class="hero-cta">Дивитись знижки →</a>
+    </div>
+    <!-- Countdown -->
+    <div class="countdown">
+      <div class="cd-label">Закінчується через</div>
+      <div class="cd-blocks">
+        <div class="cd-block"><span id="cd-d">07</span><small>днів</small></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block"><span id="cd-h">14</span><small>год</small></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block"><span id="cd-m">32</span><small>хв</small></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block"><span id="cd-s">09</span><small>сек</small></div>
+      </div>
     </div>
   </div>
 
-  <!-- SUBCATEGORIES -->
-  <div class="subcats">
-    <a class="subcat-item" href="#">
-      <div class="subcat-img"><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=400&q=80" alt="Піджаки"></div>
-      <span>Піджаки</span>
-    </a>
-    <a class="subcat-item" href="#">
-      <div class="subcat-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Верхній одяг"></div>
-      <span>Верхній одяг</span>
-    </a>
-    <a class="subcat-item" href="#">
-      <div class="subcat-img"><img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=400&q=80" alt="Сорочки"></div>
-      <span>Сорочки</span>
-    </a>
-    <a class="subcat-item" href="#">
-      <div class="subcat-img"><img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=400&q=80" alt="Футболки"></div>
-      <span>Футболки</span>
-    </a>
-    <a class="subcat-item" href="#">
-      <div class="subcat-img"><img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&q=80" alt="Джинси"></div>
-      <span>Джинси</span>
-    </a>
-    <a class="subcat-item" href="#">
-      <div class="subcat-img"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&q=80" alt="Штани"></div>
-      <span>Штани</span>
-    </a>
-  </div>
-
-  <!-- PROMO STRIP -->
-  <div class="promo-strip">
-    <div class="promo-item">
-      <span class="promo-num">−30%</span>
-      <span class="promo-label">На піджаки</span>
+  <!-- DISCOUNT BANDS -->
+  <div class="discount-bands">
+    <div class="band band--10" onclick="filterDiscount('10')">
+      <span class="band-pct">−10%</span>
+      <span class="band-cnt">18 товарів</span>
     </div>
-    <div class="promo-divider"></div>
-    <div class="promo-item">
-      <span class="promo-num">Нові</span>
-      <span class="promo-label">Сорочки весна</span>
+    <div class="band band--20" onclick="filterDiscount('20')">
+      <span class="band-pct">−20%</span>
+      <span class="band-cnt">34 товари</span>
     </div>
-    <div class="promo-divider"></div>
-    <div class="promo-item">
-      <span class="promo-num">183</span>
-      <span class="promo-label">Товари в каталозі</span>
+    <div class="band band--30" onclick="filterDiscount('30')">
+      <span class="band-pct">−30%</span>
+      <span class="band-cnt">27 товарів</span>
     </div>
-    <div class="promo-divider"></div>
-    <div class="promo-item">
-      <span class="promo-num">Free</span>
-      <span class="promo-label">Доставка від 1500 ₴</span>
+    <div class="band band--40" onclick="filterDiscount('40')">
+      <span class="band-pct">−40%</span>
+      <span class="band-cnt">17 товарів</span>
     </div>
   </div>
 
-  <!-- CATALOG WRAP -->
+  <!-- CATALOG -->
   <div class="catalog-wrap" id="catalog">
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
 
       <div class="sidebar-block">
+        <h3>Розмір знижки</h3>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" checked> Від −10% <span>96</span></label></li>
+          <li><label><input type="checkbox"> Від −20% <span>78</span></label></li>
+          <li><label><input type="checkbox"> Від −30% <span>44</span></label></li>
+          <li><label><input type="checkbox"> −40% і більше <span>17</span></label></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-block">
         <h3>Категорія</h3>
         <ul class="filter-list">
-          <li><label><input type="checkbox" checked> Піджаки і блейзери <span>34</span></label></li>
-          <li><label><input type="checkbox"> Верхній одяг <span>27</span></label></li>
-          <li><label><input type="checkbox"> Сорочки <span>42</span></label></li>
-          <li><label><input type="checkbox"> Футболки і поло <span>38</span></label></li>
-          <li><label><input type="checkbox"> Джинси <span>24</span></label></li>
-          <li><label><input type="checkbox"> Штани <span>18</span></label></li>
+          <li><label><input type="checkbox" checked> Всі <span>96</span></label></li>
+          <li><label><input type="checkbox"> Жінкам <span>54</span></label></li>
+          <li><label><input type="checkbox"> Чоловікам <span>42</span></label></li>
+          <li><label><input type="checkbox"> Верхній одяг <span>22</span></label></li>
+          <li><label><input type="checkbox"> Сукні <span>18</span></label></li>
+          <li><label><input type="checkbox"> Сорочки <span>16</span></label></li>
+          <li><label><input type="checkbox"> Штани <span>19</span></label></li>
+          <li><label><input type="checkbox"> Светри <span>21</span></label></li>
         </ul>
       </div>
 
@@ -131,12 +125,12 @@
       </div>
 
       <div class="sidebar-block">
-        <h3>Ціна</h3>
+        <h3>Ціна зі знижкою</h3>
         <div class="price-range">
-          <input type="range" min="0" max="10000" value="7000" class="range-slider" id="priceRange" oninput="updatePrice(this.value)">
+          <input type="range" min="0" max="8000" value="5000" class="range-slider" id="priceRange" oninput="updatePrice(this.value)">
           <div class="price-labels">
             <span>0 ₴</span>
-            <span id="priceVal">7 000 ₴</span>
+            <span id="priceVal">5 000 ₴</span>
           </div>
         </div>
       </div>
@@ -147,21 +141,12 @@
           <button class="color-dot active" style="background:#1a1a1a" title="Чорний"></button>
           <button class="color-dot" style="background:#fff;border:1px solid #ddd" title="Білий"></button>
           <button class="color-dot" style="background:#b5a09a" title="Бежевий"></button>
-          <button class="color-dot" style="background:#4a5568" title="Сірий"></button>
-          <button class="color-dot" style="background:#2d5a8e" title="Синій"></button>
+          <button class="color-dot" style="background:#7c9cba" title="Блакитний"></button>
+          <button class="color-dot" style="background:#c97b84" title="Рожевий"></button>
           <button class="color-dot" style="background:#6a7d6a" title="Хакі"></button>
-          <button class="color-dot" style="background:#8b4513" title="Коричневий"></button>
+          <button class="color-dot" style="background:#4a5568" title="Сірий"></button>
           <button class="color-dot" style="background:#c9a96e" title="Карамель"></button>
         </div>
-      </div>
-
-      <div class="sidebar-block">
-        <h3>Стиль</h3>
-        <ul class="filter-list">
-          <li><label><input type="checkbox" checked> Casual <span>89</span></label></li>
-          <li><label><input type="checkbox"> Business <span>54</span></label></li>
-          <li><label><input type="checkbox"> Smart casual <span>40</span></label></li>
-        </ul>
       </div>
 
       <button class="reset-btn">Скинути фільтри</button>
@@ -173,16 +158,16 @@
       <div class="filters-bar">
         <div class="filter-tabs">
           <button class="ftab active" onclick="filterTab(this)">Всі</button>
-          <button class="ftab" onclick="filterTab(this)">Новинки</button>
-          <button class="ftab" onclick="filterTab(this)">Зі знижкою</button>
-          <button class="ftab" onclick="filterTab(this)">Піджаки</button>
+          <button class="ftab" onclick="filterTab(this)">Жінкам</button>
+          <button class="ftab" onclick="filterTab(this)">Чоловікам</button>
+          <button class="ftab" onclick="filterTab(this)">Верхній одяг</button>
           <button class="ftab" onclick="filterTab(this)">Сорочки</button>
           <button class="ftab" onclick="filterTab(this)">Штани</button>
         </div>
         <div class="sort-wrap">
           <span class="sort-label">Сортувати:</span>
           <select class="sort-sel">
-            <option>Спочатку нові</option>
+            <option>Найбільша знижка</option>
             <option>Ціна: від низької</option>
             <option>Ціна: від високої</option>
             <option>Популярні</option>
@@ -194,33 +179,103 @@
 
         <div class="card">
           <div class="card-img">
-            <img class="img-main" src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&q=80" alt="Піджак класичний">
-            <img class="img-hover" src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=600&q=80" alt="">
-            <span class="badge">New</span>
+            <img class="img-main" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80" alt="Пальто oversize">
+            <img class="img-hover" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80" alt="">
+            <span class="badge">−40%</span>
             <button class="btn-wish" onclick="toggleWish(this)">
               <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </button>
             <button class="add-bar" onclick="addCart()">Додати в кошик</button>
           </div>
           <div class="card-body">
-            <div class="card-name">Піджак класичний</div>
-            <div class="card-price">3 890 ₴</div>
+            <div class="card-name">Пальто oversize</div>
+            <div class="card-price">2 094 ₴ <span class="old">3 490 ₴</span></div>
+            <div class="card-save">Економія 1 396 ₴</div>
           </div>
         </div>
 
         <div class="card">
           <div class="card-img">
-            <img class="img-main" src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=600&q=80" alt="Тренч чоловічий">
+            <img class="img-main" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Сукня міді">
             <img class="img-hover" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80" alt="">
-            <span class="badge sale">−20%</span>
+            <span class="badge">−20%</span>
             <button class="btn-wish" onclick="toggleWish(this)">
               <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </button>
             <button class="add-bar" onclick="addCart()">Додати в кошик</button>
           </div>
           <div class="card-body">
-            <div class="card-name">Тренч чоловічий</div>
-            <div class="card-price">3 192 ₴ <span class="old">3 990 ₴</span></div>
+            <div class="card-name">Сукня міді</div>
+            <div class="card-price">1 192 ₴ <span class="old">1 490 ₴</span></div>
+            <div class="card-save">Економія 298 ₴</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img class="img-main" src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80" alt="Джинси straight">
+            <img class="img-hover" src="https://images.unsplash.com/photo-1512327536842-5aa37d1ba3e3?w=600&q=80" alt="">
+            <span class="badge">−15%</span>
+            <button class="btn-wish" onclick="toggleWish(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="add-bar" onclick="addCart()">Додати в кошик</button>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Джинси straight</div>
+            <div class="card-price">1 946 ₴ <span class="old">2 290 ₴</span></div>
+            <div class="card-save">Економія 344 ₴</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img class="img-main" src="https://images.unsplash.com/photo-1603217192634-61068e4d4bf9?w=600&q=80" alt="Блейзер класичний">
+            <img class="img-hover" src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=600&q=80" alt="">
+            <span class="badge">−30%</span>
+            <button class="btn-wish" onclick="toggleWish(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="add-bar" onclick="addCart()">Додати в кошик</button>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Блейзер класичний</div>
+            <div class="card-price">2 023 ₴ <span class="old">2 890 ₴</span></div>
+            <div class="card-save">Економія 867 ₴</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img class="img-main" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Сорочка льняна">
+            <img class="img-hover" src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80" alt="">
+            <span class="badge">−20%</span>
+            <button class="btn-wish" onclick="toggleWish(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="add-bar" onclick="addCart()">Додати в кошик</button>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Сорочка льняна</div>
+            <div class="card-price">1 192 ₴ <span class="old">1 490 ₴</span></div>
+            <div class="card-save">Економія 298 ₴</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img class="img-main" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80" alt="Блуза шовкова">
+            <img class="img-hover" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80" alt="">
+            <span class="badge">−40%</span>
+            <button class="btn-wish" onclick="toggleWish(this)">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="add-bar" onclick="addCart()">Додати в кошик</button>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Блуза шовкова</div>
+            <div class="card-price">894 ₴ <span class="old">1 490 ₴</span></div>
+            <div class="card-save">Економія 596 ₴</div>
           </div>
         </div>
 
@@ -228,7 +283,7 @@
           <div class="card-img">
             <img class="img-main" src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80" alt="Сорочка Oxford">
             <img class="img-hover" src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80" alt="">
-            <span class="badge">New</span>
+            <span class="badge">−10%</span>
             <button class="btn-wish" onclick="toggleWish(this)">
               <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </button>
@@ -236,86 +291,25 @@
           </div>
           <div class="card-body">
             <div class="card-name">Сорочка Oxford</div>
-            <div class="card-price">1 690 ₴</div>
+            <div class="card-price">1 521 ₴ <span class="old">1 690 ₴</span></div>
+            <div class="card-save">Економія 169 ₴</div>
           </div>
         </div>
 
         <div class="card">
           <div class="card-img">
-            <img class="img-main" src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=600&q=80" alt="Футболка базова">
-            <img class="img-hover" src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80" alt="">
-            <button class="btn-wish" onclick="toggleWish(this)">
-              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-            <button class="add-bar" onclick="addCart()">Додати в кошик</button>
-          </div>
-          <div class="card-body">
-            <div class="card-name">Футболка базова</div>
-            <div class="card-price">890 ₴</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img class="img-main" src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80" alt="Джинси slim">
-            <img class="img-hover" src="https://images.unsplash.com/photo-1512327536842-5aa37d1ba3e3?w=600&q=80" alt="">
-            <span class="badge sale">−15%</span>
-            <button class="btn-wish" onclick="toggleWish(this)">
-              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-            <button class="add-bar" onclick="addCart()">Додати в кошик</button>
-          </div>
-          <div class="card-body">
-            <div class="card-name">Джинси slim</div>
-            <div class="card-price">1 946 ₴ <span class="old">2 290 ₴</span></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img class="img-main" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80" alt="Штани chino">
+            <img class="img-main" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80" alt="Штани wide leg">
             <img class="img-hover" src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=600&q=80" alt="">
-            <span class="badge">New</span>
+            <span class="badge">−25%</span>
             <button class="btn-wish" onclick="toggleWish(this)">
               <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </button>
             <button class="add-bar" onclick="addCart()">Додати в кошик</button>
           </div>
           <div class="card-body">
-            <div class="card-name">Штани chino</div>
-            <div class="card-price">2 190 ₴</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img class="img-main" src="https://images.unsplash.com/photo-1603217192634-61068e4d4bf9?w=600&q=80" alt="Светр меринос">
-            <img class="img-hover" src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80" alt="">
-            <span class="badge">New</span>
-            <button class="btn-wish" onclick="toggleWish(this)">
-              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-            <button class="add-bar" onclick="addCart()">Додати в кошик</button>
-          </div>
-          <div class="card-body">
-            <div class="card-name">Светр меринос</div>
-            <div class="card-price">2 490 ₴</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img class="img-main" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80" alt="Пальто вовняне">
-            <img class="img-hover" src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=600&q=80" alt="">
-            <span class="badge sale">−25%</span>
-            <button class="btn-wish" onclick="toggleWish(this)">
-              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
-            <button class="add-bar" onclick="addCart()">Додати в кошик</button>
-          </div>
-          <div class="card-body">
-            <div class="card-name">Пальто вовняне</div>
-            <div class="card-price">4 492 ₴ <span class="old">5 990 ₴</span></div>
+            <div class="card-name">Штани wide leg</div>
+            <div class="card-price">1 417 ₴ <span class="old">1 890 ₴</span></div>
+            <div class="card-save">Економія 473 ₴</div>
           </div>
         </div>
 
@@ -323,7 +317,7 @@
 
       <div class="load-more">
         <button class="load-btn">Завантажити ще</button>
-        <p class="load-sub">Показано 8 з 183 товарів</p>
+        <p class="load-sub">Показано 8 з 96 товарів</p>
       </div>
 
     </div>
@@ -331,7 +325,7 @@
 
   <!-- STRIP BANNER -->
   <div class="strip-banner">
-    <p><strong>Підпишись на розсилку</strong> — першим дізнавайся про нові колекції та отримай знижку 10% на перше замовлення.</p>
+    <p><strong>Підпишись на розсилку</strong> — першим дізнавайся про нові знижки та отримай ще −10% на перше замовлення.</p>
     <button class="strip-btn">Підписатись</button>
   </div>
 
@@ -350,10 +344,10 @@
       <div class="footer-col">
         <h4>Каталог</h4>
         <ul>
-          <li><a href="#">Новинки</a></li>
-          <li><a href="#">Жінкам</a></li>
-          <li><a href="#">Чоловікам</a></li>
-          <li><a href="#">Знижки</a></li>
+          <li><a href="new.html">Новинки</a></li>
+          <li><a href="2.html">Жінкам</a></li>
+          <li><a href="men.html">Чоловікам</a></li>
+          <li><a href="sale.html">Знижки</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -393,11 +387,22 @@
   </div>
 
   <script>
+    // Tabs
     function filterTab(el) {
       document.querySelectorAll('.ftab').forEach(b => b.classList.remove('active'));
       el.classList.add('active');
     }
+
+    // Discount bands
+    function filterDiscount(pct) {
+      document.querySelectorAll('.band').forEach(b => b.classList.remove('band--active'));
+      event.currentTarget.classList.add('band--active');
+    }
+
+    // Wishlist
     function toggleWish(btn) { btn.classList.toggle('liked'); }
+
+    // Cart
     function addCart() {
       const c = document.getElementById('cartCount');
       c.textContent = parseInt(c.textContent) + 1;
@@ -405,19 +410,50 @@
       t.classList.add('show');
       setTimeout(() => t.classList.remove('show'), 2200);
     }
+
+    // Price slider
     function updatePrice(val) {
       document.getElementById('priceVal').textContent =
         parseInt(val).toLocaleString('uk-UA') + ' ₴';
     }
+
+    // Size buttons
     document.querySelectorAll('.size-btn').forEach(btn => {
       btn.addEventListener('click', () => btn.classList.toggle('active'));
     });
+
+    // Color dots
     document.querySelectorAll('.color-dot').forEach(dot => {
       dot.addEventListener('click', () => {
         document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
         dot.classList.add('active');
       });
     });
+
+    // Countdown timer
+    (function () {
+      const end = new Date();
+      end.setDate(end.getDate() + 7);
+      end.setHours(end.getHours() + 14, end.getMinutes() + 32, 9);
+
+      function pad(n) { return String(n).padStart(2, '0'); }
+
+      function tick() {
+        const diff = end - Date.now();
+        if (diff <= 0) return;
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('cd-d').textContent = pad(d);
+        document.getElementById('cd-h').textContent = pad(h);
+        document.getElementById('cd-m').textContent = pad(m);
+        document.getElementById('cd-s').textContent = pad(s);
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    })();
   </script>
 
 </body>
